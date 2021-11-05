@@ -2,8 +2,5 @@
 Docker Compose for PHP with apache and SSL
 
 ```bash
-mkcert -install
-mkcert localhost 127.0.0.1 ::1
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./docker/ssl/cert-key -out ./docker/ssl/cert.crt
 ```
-
-Copiar os arquivos ssl para a pasta ssl
